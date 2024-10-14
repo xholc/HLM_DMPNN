@@ -5,7 +5,7 @@
 把model對於testset的預測值轉變成classification，分成 unstable(<30 min)/ moderate (30-60 min)/ stable (> 60 min)三個classes，
 並print 出Confusion Matrix/ classification_report/ matthews_corrcoef
 
-2.根據dataset這個資料夾中的CSV檔進行各種data selection，可透過oversampling minor class實現 even class training，此處的class labels來自於不同clustering methods對於datasets的分類結果，
+2.進行各種data selection，可透過oversampling minor class實現 even class training，此處的class labels來自於不同clustering methods對於datasets的分類結果，
 需要因為訓練model時需要輸入CSV所以2.5的output是CSV file，分成train/ test set CSV，找Maximal Common Structure(MCS)，有分成直接尋找，或是先抓出scaffold在找MCS
 
 3.定義將SMILES轉換成igraph objects作為後續WWL graph kernels分析的input，此處將DMPNN node / edge feature 都存入graph中並並儲存igraph objects，
